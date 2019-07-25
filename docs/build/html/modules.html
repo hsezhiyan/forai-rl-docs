@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Modules &mdash; rl-codebase 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="contents.html" class="icon icon-home"> rl-codebase
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Modules</a><ul>
+<li><a class="reference internal" href="#agents">Agents</a></li>
+<li><a class="reference internal" href="#algos">Algos</a></li>
+<li><a class="reference internal" href="#environments">Environments</a></li>
+<li><a class="reference internal" href="#hyperparameters">Hyperparameters</a></li>
+<li><a class="reference internal" href="#memory">Memory</a></li>
+<li><a class="reference internal" href="#models">Models</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="contents.html">rl-codebase</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="contents.html">Docs</a> &raquo;</li>
+        
+      <li>Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>This document covers the main components of the RL codebase.</p>
+<div class="section" id="agents">
+<h2>Agents<a class="headerlink" href="#agents" title="Permalink to this headline">¶</a></h2>
+<p>All agents are encapsulated into a single class, <code class="docutils literal notranslate"><span class="pre">Agent()</span></code>. An agent object is instantiated with the following member variables:</p>
+<ul class="simple">
+<li>TensorFlow session</li>
+<li>Hyperparameters</li>
+<li>Memory</li>
+<li>Action function</li>
+<li>Gradient function</li>
+</ul>
+</div>
+<div class="section" id="algos">
+<h2>Algos<a class="headerlink" href="#algos" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="environments">
+<h2>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h2>
+<p>The codebase has a single environment class, and two environment subclasses:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Environment</span></code></dt>
+<dd><ul class="first last">
+<li><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">CoinRun(Environment)</span></code> as described <a class="reference external" href="https://github.com/openai/coinrun/">here</a></li>
+<li><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">GymEnv(Environment)</span></code> as descibed <a class="reference external" href="https://jair.org/index.php/jair/article/view/10819/25823/">here</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">Environment</span></code> class, located at <code class="docutils literal notranslate"><span class="pre">rl/rl/envs/env.py</span></code>, acts as a template contains all the member variables and functions of a standard RL environment. The specific member variables and functions are implemented within the two subclasses.</p>
+</div>
+<div class="section" id="hyperparameters">
+<h2>Hyperparameters<a class="headerlink" href="#hyperparameters" title="Permalink to this headline">¶</a></h2>
+<p>The class to represent hyperparameters, <code class="docutils literal notranslate"><span class="pre">HParams</span></code>, is located at <code class="docutils literal notranslate"><span class="pre">rl/rl/hparams/utils.py</span></code>. The default set of hyperparameters located at <code class="docutils literal notranslate"><span class="pre">rl/rl/hparams/default.py</span></code>.</p>
+<p>The list of hyperparameters is located at <code class="docutils literal notranslate"><span class="pre">rl/rl/hparams</span></code>, segmented into the different RL algorithms each set of hyperparameters belongs to. Each RL algorithms calls the default set of hyperparameters, and depending on different environments, modifies the default set.</p>
+<p>For example, the function <code class="docutils literal notranslate"><span class="pre">ddpg()</span></code> returns a default set of <code class="docutils literal notranslate"><span class="pre">HParams</span></code> and adds a number of fields, while the
+function <code class="docutils literal notranslate"><span class="pre">ddpg_cartpole()</span></code> further modifies some of the hyperparameter fields to fit with the <code class="docutils literal notranslate"><span class="pre">Cartpole-v1</span></code> Gym environment</p>
+</div>
+<div class="section" id="memory">
+<h2>Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<p>The list of models can be found at <code class="docutils literal notranslate"><span class="pre">rl/rl/models/models</span></code>. All models are subclassed from Keras models. Each model is instantiated with a network structure and a <code class="docutils literal notranslate"><span class="pre">call()</span></code> function to call the forward pass of the network. All layers are taken from the TensorFlow Layers class.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, FOR.ai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
