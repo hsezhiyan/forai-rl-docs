@@ -1,5 +1,5 @@
 
-FOR.ai Documentation for rl-codebase 
+Generic Reinforcment Learning Codebase
 =======================================
 
 
@@ -10,11 +10,4 @@ Contents:
    :glob:
 
    *
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 

@@ -18,6 +18,7 @@ All agents are encapsulated into a single class, ``Agent()``. An agent object is
 Algos
 ------
 
+This codebase currently supports the following RL algorithms: ``DDPG``, ``DQN``, ``PPO``, and ``Vanilla Policy Gradient``.
 
 Environments
 --------
@@ -43,7 +44,9 @@ function ``ddpg_cartpole()`` further modifies some of the hyperparameter fields 
 
 
 Memory
-----------
+-------
+
+The base class for memory is located at ``rl/rl/memory/memory.py``. This codebase currently supports three memory types: simple experience reply, sum tree, and prioritized experience replay.
 
 
 Models
