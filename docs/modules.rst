@@ -1,7 +1,7 @@
 Modules
 ========
 
-This document covers the main components of the RL codebase.
+This section covers the main components of the RL codebase.
 
 Agents
 ------
