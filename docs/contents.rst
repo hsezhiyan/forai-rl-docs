@@ -83,17 +83,17 @@ Ideally, “train.py” should never need to be modified for any of the typical 
 
 Below we summerize the key arguments ::
 
-“--sys”(str) defines the system chosen to run experiment with;  e.g. “local” for running on the local machine. 
-“--env”(str) specifies the environment. 
-“--hparam_override”(str) overrides hyperparameters. 
-“--train_steps”(int) sets training length. 
-“--test_episodes”(int) tests episodes.
-“--eval_episodes”(int) sets Validation episodes.
-“--training"(bool) freeze model weights is set to False. 
-“--copies”(int) set the number of times to perform multiple versions of training/ testing.
-“--render”(bool) turns rendering on/ off. 
-“--record_video”(bool) records the video with, which outputs a .mp4 of each recorded episode.
-“--num_workers"(int) seamlessly brings our synchronous agent into an asynchronous agent.
+	“--sys”(str) defines the system chosen to run experiment with;  e.g. “local” for running on the local machine. 
+	“--env”(str) specifies the environment. 
+	“--hparam_override”(str) overrides hyperparameters. 
+	“--train_steps”(int) sets training length. 
+	“--test_episodes”(int) tests episodes.
+	“--eval_episodes”(int) sets Validation episodes.
+	“--training"(bool) freeze model weights is set to False. 
+	“--copies”(int) set the number of times to perform multiple versions of training/ testing.
+	“--render”(bool) turns rendering on/ off. 
+	“--record_video”(bool) records the video with, which outputs a .mp4 of each recorded episode.
+	“--num_workers"(int) seamlessly brings our synchronous agent into an asynchronous agent.
 
 Conclusion
 ----------
