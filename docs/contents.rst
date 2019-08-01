@@ -83,7 +83,6 @@ Ideally, “train.py” should never need to be modified for any of the typical 
 
 Below we summerize the key arguments ::
 
-
 “--sys”(str) defines the system chosen to run experiment with;  e.g. “local” for running on the local machine. 
 “--env”(str) specifies the environment. 
 “--hparam_override”(str) overrides hyperparameters. 
