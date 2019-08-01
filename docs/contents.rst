@@ -84,11 +84,17 @@ Ideally, “train.py” should never need to be modified for any of the typical 
 Below we summerize the key arguments ::
 
 
-“--sys str” defines the system chosen to run experiment with;  e.g. “local” for running on the local machine. 
-“--env str” specifies the environment. 
-“--hparam_override str”. override hyperparameters. 
-
-Set training length with “--train_steps int”. Test episodes with “--test_episodes int”. Validation episodes “--eval_episodes int” Freeze model weights “--training bool” Performing multiple versions of training/ testing with “--copies int” Turn rendering on/ off with “--render bool” Record the video with “--record_video bool”, which outputs a .mp4 of each recorded episode, soon to automatically generate a GIF. “--num_workers int”, which seamlessly brings our synchronous agent into an asynchronous agent.
+“--sys”(str) defines the system chosen to run experiment with;  e.g. “local” for running on the local machine. 
+“--env”(str) specifies the environment. 
+“--hparam_override”(str) overrides hyperparameters. 
+“--train_steps”(int) sets training length. 
+“--test_episodes”(int) tests episodes.
+“--eval_episodes”(int) sets Validation episodes.
+“--training"(bool) freeze model weights is set to False. 
+“--copies”(int) set the number of times to perform multiple versions of training/ testing.
+“--render”(bool) turns rendering on/ off. 
+“--record_video”(bool) records the video with, which outputs a .mp4 of each recorded episode.
+“--num_workers"(int) seamlessly brings our synchronous agent into an asynchronous agent.
 
 Conclusion
 ----------
