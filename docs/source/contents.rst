@@ -9,9 +9,9 @@ Vast reinforcement learning (RL) research groups, such as DeepMind and OpenAI, h
 Related Work
 ------------
 
-There are currently various implementations available for reinforcement learning codebase like OpenAI baselines@dhariwal:2017, Stable baselines @hill2019, Tensorforce@schaarschmidt:2017, Ray rllib@liang:2017, Intel Coach@caspi:2017, Keras-RL @kerasrl:2019, Dopamine baselines @castro:2018 and TF-Agents @guadarramatf. Ray rllib @liang:2017 is amongst the strongest of existing RL frameworks, supporting; distributed operations, TensorFlow@abadi:2016, PyTorch@paszke:2017 and multi-agent reinforcement learning (MARL). Unlike Ray rllib, we choose to focus on Tensorflow support, allowing us to integrate specific framework visualisation and experiment tracking into our codebase. On top of this, we are developing a Kuberenetes script for MacOS and Linux users to connect to any cloud computing platform, such as Google TPU’s, Amazon AWS etc. Most other frameworks are plagued with problems like usability issues (difficult to get started and increment over), very little modularity in code (no/ little hierarchy and code reuse), no asynchronous training support, weak support for TensorBoard logging and so on. All these problems are solved by our project, which is a generic codebase built for reinforcement learning (RL) research in Tensorflow@schaarschmidt:2017, with favoured RL agents pre-implemented as well as integration with OpenAI Gym@brockman:2016 environment focusing on quick prototyping and visualisation.
+There are currently various implementations available for reinforcement learning codebase like OpenAI baselines :cite:`dhariwal:2017`, Stable baselines :cite:`hill:2019`, Tensorforce :cite:`schaarschmidt:2017`, Ray rllib :cite:`liang:2017`, Intel Coach :cite:`caspi:2017`, Keras-RL :cite:`kerasrl:2019`, Dopamine baselines :cite:`castro:2018` and TF-Agents :cite:`guadarramatf`. Ray rllib :cite:`liang:2017` is amongst the strongest of existing RL frameworks, supporting; distributed operations, TensorFlow :cite:`abadi:2016`, PyTorch :cite:`paszke:2017` and multi-agent reinforcement learning (MARL). Unlike Ray rllib, we choose to focus on Tensorflow support, allowing us to integrate specific framework visualisation and experiment tracking into our codebase. On top of this, we are developing a Kuberenetes script for MacOS and Linux users to connect to any cloud computing platform, such as Google TPU’s, Amazon AWS etc. Most other frameworks are plagued with problems like usability issues (difficult to get started and increment over), very little modularity in code (no/ little hierarchy and code reuse), no asynchronous training support, weak support for TensorBoard logging and so on. All these problems are solved by our project, which is a generic codebase built for reinforcement learning (RL) research in Tensorflow :cite:`schaarschmidt:2017`, with favoured RL agents pre-implemented as well as integration with OpenAI Gym :cite:`brockman:2016` environment focusing on quick prototyping and visualisation.
 
-Deep Reinforcement Learning Reinforcement learning refers to a paradigm in artificial intelligence where an agent performs a sequence of actions in an environment to maximise rewards@sutton:1998. It is in many ways more general and challenging than supervised learning since it requires no labels to train on; instead, the agent interacts continuously with the environment, gathering more and more data and guiding its learning process.
+Deep Reinforcement Learning Reinforcement learning refers to a paradigm in artificial intelligence where an agent performs a sequence of actions in an environment to maximise rewards :cite:`sutton:1998`. It is in many ways more general and challenging than supervised learning since it requires no labels to train on; instead, the agent interacts continuously with the environment, gathering more and more data and guiding its learning process.
 
 Introduction: for-ai/rl
 -----------------------
@@ -73,7 +73,7 @@ Our modularisation enables simple and easy-to-read implementation of each compon
 		$ def step(action) -> state, reward, done
 
 
-The codebase includes agents like Deep Q Network@mnih:2013, Noisy DQN@plappert:2017, Vanilla Policy Gradient@sutton:2000, Deep Deterministic Policy Gradient@silver2014deterministic and Proximal Policy Optimization@schulman2017proximal. The project also includes simple random sampling and proportional prioritized experience replay approaches, support for Discrete and Box environments, option to render environment replay and record the replay in a video. The project also gives the possibility to conduct model-free asynchronous training, setting hyperparameters for your algorithm of choice, modularized action and gradient update functions and option to show your training logs in a TensorBoard summary.
+The codebase includes agents like Deep Q Network :cite:`mnih:2013`, Noisy DQN :cite:`plappert:2017`, Vanilla Policy Gradient :cite:`sutton:2000`, Deep Deterministic Policy Gradient :cite:`silver2014deterministic` and Proximal Policy Optimization :cite:`schulman2017proximal`. The project also includes simple random sampling and proportional prioritized experience replay approaches, support for Discrete and Box environments, option to render environment replay and record the replay in a video. The project also gives the possibility to conduct model-free asynchronous training, setting hyperparameters for your algorithm of choice, modularized action and gradient update functions and option to show your training logs in a TensorBoard summary.
 
 In order to run an experiment, run:
 
@@ -98,12 +98,13 @@ Below we summerize the key arguments ::
 Conclusion
 ----------
 
-We have outlined the benefits of using a highly modularised reinforcement learning codebase. The next stages of development for the RL codebase are implementing more SOTA model-free RL techniques (GAE, Rainbow, SAC, IMPALA), introducing model-based approaches, such as World Models@ha:2018, integrating into an open-sourced experiment managing tool and expanding the codebases compatibility with a broader range of environments, such as Habitat @savva:2019. We would also like to see automatic hyperparameter optimization techniques to be integrated, such as Bayesian Optimization method which was crucial to the success of some of DeepMinds most considerable reinforcement learning feats@chen:2018.
+We have outlined the benefits of using a highly modularised reinforcement learning codebase. The next stages of development for the RL codebase are implementing more SOTA model-free RL techniques (GAE, Rainbow, SAC, IMPALA), introducing model-based approaches, such as World Models :cite:`ha:2018`, integrating into an open-sourced experiment managing tool and expanding the codebases compatibility with a broader range of environments, such as Habitat :cite:`savva:2019`. We would also like to see automatic hyperparameter optimization techniques to be integrated, such as Bayesian Optimization method which was crucial to the success of some of DeepMinds most considerable reinforcement learning feats :cite:`chen:2018`.
 
 Acknowledgements
 ----------------
 
 We would like to thank all other members of For.ai, for useful discussions and feedback.
 
-
-
+References
+----------------
+.. bibliography:: references.bib
